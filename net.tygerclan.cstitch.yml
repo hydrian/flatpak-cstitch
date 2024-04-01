@@ -21,8 +21,11 @@ modules:
       - "cd icons && for FILE in *.svg ; do  rsvg-convert  --width 32 --keep-aspect-ratio ${FILE} > ${FILE%.*}.png ; done"
       - 'qmake'
       - 'make'
-      - 'mkdir -p /app/bin'
-      - "cp cstitch /app/bin/cstitch"
+      - "install -Dm755 cstitch /app/bin/cstitch"
+      - "install -Dm644 cstitch.desktop  /app/share/applications/${FLATPAK_ID}.desktop"
+      - "install -Dm644 icons/cstitch.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
+      - "desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop"
+      
     builddir: true
     sources: 
       - type: git
