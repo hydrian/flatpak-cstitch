@@ -31,3 +31,4 @@ modules:
       - type: git
         url: 'https://git.code.sf.net/p/cstitch/code'
         tag: 0.9.8
+        commit: "0a82b07dce1ad040991167b91f12e265a7618d9e"
