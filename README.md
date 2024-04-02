@@ -1,3 +1,3 @@
-# flatpak-cstitch
+# Cstitch
 
-Flatpak for CStitich
+Flatpak package for cross-stitch generating applicatition CStitich (https://cstitch.sourceforge.net/)
